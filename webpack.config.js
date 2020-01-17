@@ -21,6 +21,13 @@ module.exports = {
         ]
     },
 
+    // inline-source-map 可追踪错误和警告，  注意：不要用于生产环境
+    // devtool: 'inline-source-map',  
+
+    devServer:{
+        contentBase: './dist'
+    },
+
     plugins: [
         new CleanWebpackPlugin(),
         new htmlWebpackPlugin({
