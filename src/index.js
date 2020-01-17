@@ -19,10 +19,17 @@ function component() {
     var myImage = new Image();
     myImage.src = image;
 
-    element.appendChild(myImage);
+    // element.appendChild(myImage);
     element.appendChild(btn);
 
     return element;
 }
 
 document.body.appendChild(component());
+
+if(module.hot) {
+    module.hot.accept('./print.js', function() {
+        console.log("Accept the updated printMe module!");
+        printMe();
+    })
+}
